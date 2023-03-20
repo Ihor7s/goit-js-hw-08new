@@ -4,6 +4,10 @@ const STORAGE_KEY = "feedbak-from-state";
 
 let formData = {};
 
+const form = document.querySelector('.feedback-form');
+const emailInput = document.querySelector('.feedback-form input');
+const textareaInput = document.querySelector('.feedback-form textarea');
+
 const refs = {
     form: document.querySelector('.feedback-form'),
     emailInput: document.querySelector('.feedback-form input'),
@@ -14,7 +18,6 @@ refs.form.addEventListener('submit', onFormSubmit);
 refs.form.addEventListener('input', throttle(onSaveFormInput, 500));
 
 onFormRecovery();
-
 
 function onFormSubmit(e) {
     e.preventDefault();
