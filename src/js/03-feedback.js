@@ -25,6 +25,10 @@ function onFormSubmit(e) {
     const emailValue = refs.emailInput.value;
     const textareaValue = refs.textareaInput.value;
 
+    console.log(emailValue);
+    console.log(textareaValue);
+
+
     if (emailValue === '' || textareaValue === '') {
         alert ('Ви незаповнили форму')
     }
